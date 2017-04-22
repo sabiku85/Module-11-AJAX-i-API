@@ -4,65 +4,81 @@
 	padding: 0;
 }
 
-html,
-body {
-	height: 100%;
+body,
+.container {
+	background-color: #FFFAF0;
 }
 
-main {
-	background: url(https://images.pexels.com/photos/262272/pexels-photo-262272.jpeg?h=350&auto=compress&cs=tinysrgb) no-repeat center /cover;
+.container-fluid {
+	margin: 15px auto;
 	text-align: center;
 	height: 100%;
 }
 
+.wrapper {
+	background: url(https://images.pexels.com/photos/335393/pexels-photo-335393.jpeg?h=350&auto=compress&cs=tinysrgb) no-repeat center /cover;
+	width: 100%;
+	min-height: 300px;
+}
+
 h1 {
-	padding-top: 30px;
-	padding-bottom: 75px;
-	font: 56px 'Montserrat', sans-serif;
-	color: #FF7145;
-	text-transform: uppercase;
+	font: 72px 'Kalam';
+	color: #3300FF;
+	margin: 50px auto;
 }
 
-h2,
-h3 {
-	font: 42px 'Kalam', cursive;
- 	color: #999933;
- 	padding: 0 100px 50px 100px;
-}
-
-h3 {
-	font-size: 28px;
-}
-
-.trigger,
-.tweet {
-	display: block;
-	margin: 0 auto;
-	cursor: pointer;
-	font: 36px 'Montserrat', sans-serif;
-	color: #FFFF00;
-	outline-style: none;
-	text-transform: uppercase;
-	border: none;
+input {
 	border-radius: 5px;
-	width: 500px;
-	height: 75px;
-	background-color: #999933;
+	color: #286090;
+	font: bold 19px 'Verdana';
+	padding: 10px;
+	margin-right: 20px;
 }
 
-.trigger:hover,
-.tweet:hover {
-	outline-style: none;
-	opacity: .7;
+h2 {
+	font: 42px 'Montserrat';
+	color: #330066;
+	margin: 50px auto;	
 }
 
-.tweet {
-	font-size: 24px;
-	text-decoration: none;
-	line-height: 75px;
-	margin-top: 15px;
+tbody {
+	border-top: 2px solid #CCC;
 }
 
-i {
-	margin-right: 15px;
+#capitals,
+thead > tr :nth-child(2) {
+	border-right: 2px solid #CCC;
+	border-left: 2px solid #CCC;
+}
+
+tr {
+	display: table-cell;
+}
+
+th,
+td {
+	box-sizing: content-box;
+	font: bold 21px 'Verdana';
+	color: #330066;	
+	text-align: center;
+	min-width: 370px;
+	max-width: 30%;
+	padding: 10px 0;
+}
+
+th {
+	text-transform: uppercase;
+	background-color: rgba(51, 0, 102, .3);
+}
+
+td {
+	display: block;
+	float: left;
+	font-size: 14px;
+	text-align: left;
+	text-indent: 15%;
+}
+
+tbody > tr > td > td:nth-child(even) {
+	background-color: rgba(134, 137, 140, .3);
 }
