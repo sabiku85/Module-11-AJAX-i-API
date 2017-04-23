@@ -45,14 +45,10 @@ tbody {
 	border-top: 2px solid #CCC;
 }
 
-#capitals,
-thead > tr :nth-child(2) {
+tbody > tr td:nth-child(2),
+thead > tr th:nth-child(2) {
 	border-right: 2px solid #CCC;
 	border-left: 2px solid #CCC;
-}
-
-tr {
-	display: table-cell;
 }
 
 th,
@@ -72,11 +68,8 @@ th {
 }
 
 td {
-	display: block;
-	float: left;
 	font-size: 14px;
-	text-align: left;
-	text-indent: 15%;
+	text-align: center;
 }
 
 tbody > tr > td > td:nth-child(even) {

@@ -1,9 +1,7 @@
 $(function() {
 	var url = 'https://restcountries.eu/rest/v2/name/';
-	var $countriesList = $('#countries');
-	var $capitalsList = $('#capitals');
-	var $regionsList = $('#regions');
-	
+	var $table = $("#countries-list");
+
 	$('#search').click(searchCountries);
 
 	function searchCountries() {
@@ -19,14 +17,18 @@ $(function() {
 	}
 
 	function showCountriesList(resp) {
-		$countriesList.empty();
-		$capitalsList.empty();
-		$regionsList.empty();
+		var $tableBody = $table.find('tbody'),
+			result = "";
 		
 		resp.forEach(function(item) {
-			$('<td>').text(item.name).appendTo($countriesList);
-			$('<td>').text(item.capital).appendTo($capitalsList);
-			$('<td>').text(item.region).appendTo($regionsList);
+			result += '\
+				<tr> \
+					<td>' + item.name + '</td> \
+					<td>' + item.capital + '</td> \
+					<td>' + item.region + '</td> \
+				</tr>';
 		});
+
+		$tableBody.empty().append(result);
 	}
 })
