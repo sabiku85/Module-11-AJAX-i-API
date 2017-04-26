@@ -4,81 +4,93 @@
 	padding: 0;
 }
 
-body,
-.container {
-	background-color: #FFFAF0;
-}
-
-.container-fluid {
-	margin: 15px auto;
-	text-align: center;
-	height: 100%;
-}
-
-.wrapper {
-	background: url(https://images.pexels.com/photos/335393/pexels-photo-335393.jpeg?h=350&auto=compress&cs=tinysrgb) no-repeat center /cover;
-	width: 100%;
-	min-height: 300px;
+body {
+	background-color: #000;
 }
 
 h1 {
-	font: 72px 'Kalam';
-	color: #3300FF;
+	color: #FFF;
+	font: bold 72px 'Arial';
+	text-align: center;
+	padding-top: 50px;
+}
+
+.create-column.btn-block {
+	width: 60%;
 	margin: 50px auto;
 }
 
-input {
-	border-radius: 5px;
-	color: #286090;
-	font: bold 19px 'Verdana';
-	padding: 10px;
-	margin-right: 20px;
+.column-container {
+	display: flex;
+	min-height: 50px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	width: 100%;
+	height: 100%;
+	margin: 50px auto;
 }
 
-h2 {
-	font: 42px 'Montserrat';
-	color: #330066;
-	margin: 50px auto;	
+.column {
+	min-width: 250px;
+	margin: 0 auto;
+	border: 2px solid #FFFFCC;
 }
 
-tbody {
-	border-top: 2px solid #CCC;
-}
-
-#capitals,
-thead > tr :nth-child(2) {
-	border-right: 2px solid #CCC;
-	border-left: 2px solid #CCC;
-}
-
-tr {
-	display: table-cell;
-}
-
-th,
-td {
-	box-sizing: content-box;
-	font: bold 21px 'Verdana';
-	color: #330066;	
+.column-title {
+	color: #FFFFCC;
+	font: 36px 'Arial';
 	text-align: center;
-	min-width: 370px;
-	max-width: 30%;
-	padding: 10px 0;
+	border-bottom: 2px solid #FFFFCC;
+	padding-bottom: 10px; 
 }
 
-th {
-	text-transform: uppercase;
-	background-color: rgba(51, 0, 102, .3);
+.btn-delete,
+.add-card {
+	display: flex;
+	width: 50%;
+	margin: 15px auto;
+	justify-content: center;
 }
 
-td {
-	display: block;
-	float: left;
-	font-size: 14px;
-	text-align: left;
-	text-indent: 15%;
+.btn-warning {
+	background-color: #FF9900;
+	border-color: #FF9900;
 }
 
-tbody > tr > td > td:nth-child(even) {
-	background-color: rgba(134, 137, 140, .3);
+ul {
+	list-style-type: none;
+}
+
+.column-card-list {
+	border-top: 2px solid #FFFFCC;
+	min-height: 100%;
+	width: 100%;
+	min-width: 125px;
+}
+
+.card {
+	margin: 0 auto;
+	list-style-type: none;
+}
+
+.card-description {
+	min-height: 50px;
+	width: 120px;
+	height: 120px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: 10px auto 30px;
+	padding: 5px;
+	border-radius: 10px;
+	background-color: #FFFF00;
+	color: #000033;
+	font-weight: bold;
+	transition: .3s;
+}
+
+.card-description:hover {
+	cursor: pointer;
+	background-color: #FFFF66;
 }
